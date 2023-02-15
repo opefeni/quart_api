@@ -25,7 +25,7 @@ async def test_create_card(test_app: Quart)->None:
     
 # incorrect instance 
 @pytest.mark.asyncio
-async def test_create_card(test_app: Quart)->None:
+async def test_create_card_bad_data(test_app: Quart)->None:
     test_client = test_app.test_client()
     response = await test_client.post(
         "/cards/", 
